@@ -1,0 +1,64 @@
+OpenEmbedded/Yocto layer for NXP's NFC stack
+============================================
+
+This layer provides support for NXP's NFC NCI driver, user space lib,
+and demo application.
+
+The layer is SoC/CPU agnostic and can be used with any OpenEmbedded/Yocto
+Project BSP, as long as the base layers provide board support for at least
+the 4 NFC essential signals required by the NFC shields:
+
+* I2C Clock from the processor
+* I2C Data from the processor
+* IRQ from the NFC board to the processor
+* Enable signal from the processor to the NFC board
+
+Dependencies
+------------
+
+This layer depends on:
+
+URI: git://git.openembedded.org/openembedded-core
+branch: master
+revision: HEAD
+
+Testing
+-------
+
+The following environment, depicted in https://community.nxp.com/docs/DOC-343007,
+has been used for development and tests:
+
+Boards: 
+* i.MX8Mmini evk (www.nxp.com/imx8mminievk)
+* OM5578/PN7150RPIM (https://www.nxp.com/board/OM5578)
+-- OM5578/PN7150RPIM must be slightly modified because some of the signals
+required by PN7150 are not mapped to i.MX8Mmini evk expansion connector pins.
+
+Software:
+* i.MX Linux 4.14.78_1.0.0 BSP (https://www.nxp.com/imxsw)
+* meta-nxp-nfc layer (https://github.com/NXPNFCLinux/meta-nxp-nfc)
+
+To test the NFC stack integration, one can add the nxp-nfc-bin package to
+any system image. The bin package is provided by the same recipe that provides
+the nxp-nfc lib package, which in turn depends on the external kernel driver
+module package, also part of this layer.
+
+Once the system is up and running, the following command will poll for
+NFC tags, and will print the content read from the NFC tag to the screen:
+
+# nfcDemoApp poll
+
+Notes
+-----
+
+This layer is the continuation of the work initiated by Rogerio Nunes (see 
+https://github.com/rpnwoody/meta-nxp-nfc).
+
+The SW stack enabled by this layer is custom implementation, non-compliant to
+the mainstream Linux NFC Project.
+
+Additional information about the SW stack is available in the following
+references:
+https://www.nxp.com/documents/application_note/AN11697.pdf
+https://github.com/NXPNFCLinux/linux_libnfc-nci/tree/master/doc/Linux_NFC_API_Guide
+

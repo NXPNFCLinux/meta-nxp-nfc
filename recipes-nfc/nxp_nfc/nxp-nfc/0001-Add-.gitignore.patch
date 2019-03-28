@@ -1,0 +1,84 @@
+From 884558c568b953f7859b994d546582f62943ec5c Mon Sep 17 00:00:00 2001
+From: Jeremy Geslin <jeremy.geslin@nxp.com>
+Date: Wed, 27 Mar 2019 11:23:40 +0100
+Subject: [PATCH] Add .gitignore
+
+Signed-off-by: Jeremy Geslin <jeremy.geslin@nxp.com>
+---
+ .gitignore | 64 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 64 insertions(+)
+ create mode 100644 .gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..2ab992a
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,64 @@
++# Object files
++*.o
++*.ko
++*.obj
++*.elf
++
++# Precompiled Headers
++*.gch
++*.pch
++
++# Libraries
++*.lib
++*.a
++*.la
++*.lo
++
++# Shared objects (inc. Windows DLLs)
++*.dll
++*.so
++*.so.*
++*.dylib
++
++# Executables
++*.exe
++*.out
++*.app
++*.i*86
++*.x86_64
++*.hex
++nfcDemoApp
++
++# Debug files
++*.dSYM/
++*.su
++
++# Autotools
++.deps/
++.libs/
++.dirstamp
++Makefile.in
++Makefile
++/aclocal.m4
++/autom4te.cache
++/autoscan.log
++/autoscan-*.log
++/aclocal.m4
++/compile
++/config.guess
++/config.h
++/config.h.in
++/config.h.in~
++/config.log
++/config.status
++/config.sub
++/configure
++/configure.scan
++/depcomp
++/install-sh
++/libtool
++/ltmain.sh
++/m4
++/missing
++/stamp-h1
++/libnfc-nci.pc
+-- 
+2.7.4
+

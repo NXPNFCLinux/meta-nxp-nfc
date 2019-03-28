@@ -1,0 +1,26 @@
+From 3d6601e595358136746b8de54042da52755bf5cd Mon Sep 17 00:00:00 2001
+From: Rogerio Nunes <rogerio.nunes@nxp.com>
+Date: Wed, 27 Apr 2016 14:04:01 -0400
+Subject: Add .gitignore
+
+Upstream status: pending 
+
+Signed-off-by: Rogerio Nunes <rogerio.nunes@nxp.com>
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..39cc314
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,8 @@
++*.ko
++*.o
++*.cmd
++*.mod.c
++
++modules.order
++Module.symvers
++.tmp_versions
+-- 
+1.9.1
+
