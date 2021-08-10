@@ -10,6 +10,6 @@ SRC_URI = " \
     file://0001-Add-.gitignore.patch \
     file://0002-Makefile-cleanup-tagetting-a-Yocto-Project-recipe.patch \
 "
-SRCREV = "573e2ddb7cd15c34d3da0743318569f48b949ceb"
+SRCREV = "5cabbc58ff17f6023b4d0d217cdfb31b63f737c4"
 
 S = "${WORKDIR}/git"

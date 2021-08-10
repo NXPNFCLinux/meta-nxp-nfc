@@ -6,9 +6,8 @@ LIC_FILES_CHKSUM = "file://src/include/linux_nfc_api.h;md5=3a0d875da69c680361575
 
 SRC_URI = " \
     git://github.com/NXPNFCLinux/linux_libnfc-nci.git;branch=master \
-    file://0001-Add-.gitignore.patch \
 "
-SRCREV = "751f7bfa9f3f5b43e8a179d0a80dabd6bc1dac17"
+SRCREV = "171a0d408812e3c882625f8f487bd521fd645e1e"
 
 inherit autotools pkgconfig lib_package
 
